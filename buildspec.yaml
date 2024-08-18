@@ -5,7 +5,7 @@ version: 0.2
 
 env:
   variables:
-    AWS_REGION: ap-south-1
+    AWS_REGION: us-east-1
     ECR_REPOSITORY_URI: public.ecr.aws/x1x2l5r7/mydemoecrrepo
 
 phases:
