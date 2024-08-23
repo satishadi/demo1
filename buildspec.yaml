@@ -1,16 +1,21 @@
 
+
+
+
+
 version: 0.2
 
 phases:
   install:
     runtime-versions:
-      java: corretto17
+      java: corretto11
     commands:
       # Install the latest version of the AWS CLI if needed
       - echo Installing AWS CLI...
       - pip install --upgrade awscli
-      # Install Maven if required
+      # Install Maven using apt-get
       - echo Installing Maven...
+      - apt-get update
       - apt-get install -y maven
       # Authenticate Docker to AWS ECR
       - echo Logging in to Amazon ECR...
@@ -39,4 +44,5 @@ phases:
 artifacts:
   files:
     - '**/*'
+
 
