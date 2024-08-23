@@ -1,12 +1,9 @@
 
-
-
 version: 0.2
 
 phases:
   install:
     runtime-versions:
-      docker: 18
       java: corretto17
     commands:
       # Install the latest version of the AWS CLI if needed
